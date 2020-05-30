@@ -1,6 +1,6 @@
 datasource DS {
   provider = "sqlite"
-  url      = env("DATABASE_URL")
+  url = "***"
 }
 
 generator client {
@@ -12,13 +12,5 @@ model Post {
   id        Int      @default(autoincrement()) @id
   title     String
   body      String
-  createdAt DateTime @default(now())
-}
-
-model Contact {
-  id        Int      @default(autoincrement()) @id
-  name      String
-  email     String
-  message   String
   createdAt DateTime @default(now())
 }
